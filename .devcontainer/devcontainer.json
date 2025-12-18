@@ -1,13 +1,8 @@
 {
-  "name": "NDTwin Light",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
-  "features": {
-    "ghcr.io/devcontainers/features/hugo:1": {
-      "version": "extended"
-    },
-    "ghcr.io/devcontainers/features/go:1": {}
+  "name": "NDTwin Stable",
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "npm install && git submodule update --init --recursive",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,5 +11,6 @@
       ]
     }
   },
+  "postCreateCommand": "npm install && git submodule update --init --recursive",
   "forwardPorts": [1313]
 }
