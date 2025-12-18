@@ -1,12 +1,18 @@
 # 使用輕量級的 Node.js 環境
 FROM mcr.microsoft.com/devcontainers/javascript-node:18
 
-# 更新系統並安裝 Go 語言 (Docsy 需要 Go 來下載模組)
-RUN apt-get update && apt-get install -y golang-go
+# 1. 安裝必要工具和 Go 語言
+RUN apt-get update && apt-get install -y golang-go curl wget
 
-# 手動下載並安裝 Hugo Extended v0.135.0 (注意版號必須精確)
-RUN wget -q -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.135.0/hugo_extended_0.135.0_linux-amd64.tar.gz \
+# 2. 自動抓取 Github 上 "最新版" 的 Hugo Extended
+# 這樣我們就不用一直手動改版號，保證符合 Docsy 的最新需求
+RUN version=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep tag_name | cut -d '"' -f 4 | cut -c 2-) \
+    && echo "Downloading Hugo version: $version" \
+    && wget -q -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${version}/hugo_extended_${version}_linux-amd64.tar.gz" \
     && tar -xf hugo.tar.gz \
     && mv hugo /usr/local/bin/hugo \
     && rm hugo.tar.gz \
-    && echo "Hugo installed successfully!"
+    && hugo version
+
+# 3. 驗證安裝是否成功
+RUN echo "Hugo installation complete!"
