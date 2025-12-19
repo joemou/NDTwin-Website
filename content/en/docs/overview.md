@@ -1,48 +1,43 @@
 ---
 title: Overview
 linkTitle: Overview
-description: Learn how NDTwin facilitates OpenFlow/SDN network simulation and development.
 weight: 1
+description: >
+  Understand how NDTwin transforms OpenFlow development through real-time visualization and high-fidelity simulation.
 ---
 
 {{% pageinfo %}}
-**NDT** is a digital twin platform designed specifically for **SDN (Software-Defined Networking)**. It utilizes the OpenFlow protocol and sFlow technology to enable real-time monitoring and simulation of network behavior.
+**NDTwin (Network Digital Twin)** is a high-fidelity emulation platform designed specifically for **OpenFlow-based SDN networks**. It bridges the gap between control plane logic and data plane reality.
 {{% /pageinfo %}}
 
-Debugging in traditional OpenFlow development workflows is often a challenge. Developers struggle to visualize how flow entries installed by the controller actually affect packet forwarding in real-time. NDTwin provides a high-fidelity, visualized environment that allows you to verify Control Plane logic instantly.
+Debugging in traditional OpenFlow workflows is notoriously difficult. Developers often struggle to visualize how flow entries installed by the controller actually affect packet forwarding in real-time. Parsing `ovs-ofctl dump-flows` text outputs is slow and error-prone.
+
+**NDTwin solves this "visibility gap."** By integrating a high-performance C++ core with the Ryu Controller and sFlow telemetry, we provide a visualized environment where you can verify routing logic, monitor link bandwidth, and simulate failures instantly.
 
 ## What is NDTwin?
 
-NDTwin (Network Digital Twin) is a comprehensive development platform that integrates **OpenFlow switches**, the **Ryu Controller**, and **sFlow monitoring**.
+NDTwin operates as a comprehensive development ecosystem that synchronizes your physical or emulated network state with a digital graph model.
 
-Its core objective is to solve the "visibility" problem in SDN development. Once the Ryu controller deploys rules, NDTwin utilizes sFlow sampling to report link status in real-time, transforming complex network topology data and flow table behaviors into intuitive graphical insights.
+* **Topology Awareness**: The system continuously polls the Ryu controller to build a real-time graph of switches and links.
+* **Traffic Intelligence**: A built-in sFlow collector listens for telemetry data to calculate bandwidth utilization and identify traffic patterns (like Elephant Flows) with high precision.
+* **Deployment Flexibility**: Whether you are running a simulation in **Mininet** or deploying on a physical **Testbed** with hardware switches, NDTwin adapts its monitoring strategy accordingly.
 
-## Why use NDTwin?
+## Why Choose NDTwin?
 
-If your team is developing OpenFlow-based network applications (e.g., dynamic routing, load balancing, or energy-saving mechanisms), NDTwin offers the following advantages:
+If your team is developing advanced network applications—such as dynamic routing, load balancing, or energy-aware traffic engineering—NDTwin offers distinct advantages over standard monitoring tools.
 
 ### ✅ Key Benefits
-- **Native OpenFlow Support**: Fully compatible with OpenFlow 1.0/1.3 standards. Seamlessly integrates with standard SDN controllers like Ryu or ONOS.
-- **Real-time Flow Visualization**: Say goodbye to parsing text output from `ovs-ofctl dump-flows`. We provide a graphical interface to display Flow Rules and packet match counters instantly.
-- **Precise Traffic Monitoring**: Integrated sFlow technology provides accurate 5-tuple sampling and real-time bandwidth utilization analysis for every link.
-- **Dynamic Topology Awareness**: The system automatically detects Link Failures or new switch connections, triggering alerts to help verify rerouting algorithms.
 
-### 🎯 Use Cases
-- **SDN Algorithm Verification**: Validate if your new routing algorithms or QoS policies work as expected.
-- **Network Education**: Help students visualize and understand the OpenFlow Match-Action mechanism.
-- **Energy-Saving Applications**: Simulate network behavior and connectivity when specific switch ports are powered down.
+* **Native OpenFlow Support**: Fully compatible with OpenFlow 1.0/1.3 standards. It seamlessly integrates with standard SDN controllers like **Ryu** or ONOS.
+* **Real-time Flow Visualization**: Eliminate manual CLI debugging. Our graphical interface displays active Flow Rules and packet match counters, mapped directly to the topology.
+* **Precise Traffic Monitoring**: Unlike simple counters, our integrated sFlow technology performs **5-tuple sampling** (Src/Dst IP, Port, Protocol) to analyze real-time bandwidth usage and detect congestion bottlenecks.
+* **Dynamic Topology Awareness**: The system automatically detects Link Failures or new switch connections, triggering alerts to help you verify if your rerouting algorithms react correctly.
 
-## System Architecture
+## 🎯 Use Cases
 
-<div class="alert alert-light border">
-    <img src="/images/NdtArcht.png" class="img-fluid d-block mx-auto" alt="NDTwin Architecture" style="max-height: 400px;">
-    <p class="text-center text-muted mt-2"><small>Figure 1: NDTwin System Architecture (OpenFlow & sFlow)</small></p>
-</div>
+| Scenario | Description |
+| :--- | :--- |
+| **Algorithm Verification** | Validate if your new shortest-path or multipath routing algorithms work as expected under load. |
+| **Network Education** | Help students visualize the abstract concept of the "Match-Action" mechanism in OpenFlow. |
+| **Energy-Saving Research** | Simulate network behavior when specific switch ports are powered down to save energy, and verify connectivity is maintained. |
 
-## Where should I go next?
-
-Ready to get started? Check out the following resources:
-
-- [**System Architecture**](/docs/architecture/): Dive deep into the three-layer architecture of NDTwin.
-- [**Getting Started**](/docs/getting-started/): Set up your first OpenFlow experimental environment in minutes.
-- [**Examples**](/docs/examples/): Browse our sample code for Ryu controller integration.
