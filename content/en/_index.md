@@ -10,8 +10,7 @@ menu:
 <section class="row align-items-center pb-5" style="padding-top: 4rem;">
   <div class="col-lg-6 text-left">
     <h1 class="display-4 mb-4" style="font-weight: 700;">
-      <span style="color: #216692;">NDT</span><span style="color: #E88130;">win</span> <br>
-      <span style="font-size: 0.7em; color: #4a4a4a;">Network Digital Twin</span>
+      <span style="font-size: 0.7em; color: #4a4a4a;"> NDTwin Network Digital Twin</span>
     </h1>
     <p class="lead mb-4">
       A novel network digital twin (NDT) open source framework designed for optimally operating and managing a network.<br><br> Its kernel continuously collects real-time network and flow states. Its apps use <strong> simulation and AI/ML technologies </strong> to: 1) evaluate/predict the outcome of many "what-if" conditions, 2) find the optimal solution to the current or a predicted situation, and 3) issue commands to network devices in real time to perform the best solution. Its tools feature a Web GUI that uses Large Language Model (LLM) to support intent-based network management and a real-time network traffic visualizer.<br><br>NDTwin operates correctly and successfully on both physical networks composed of hardware switches and emulated networks formed by Mininet. It can be used as an automatic system to optimize the operation of a production network or as an academic platform to conduct NDT-based research. Developers can use this framework to develop, test, evaluate, and deploy their innovative NDT applications.             
