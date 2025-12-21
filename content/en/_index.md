@@ -32,7 +32,7 @@ menu:
 {{% blocks/section color="light" type="row" %}}
 
 {{% blocks/feature icon="fa-solid fa-network-wired" title="Network Visualization" %}}
-Monitor network status and topology changes in real-time.
+Visualize network status, topology changes, and traffic flows in real-time.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-code" title="OpenFlow Support" %}}
