@@ -32,7 +32,7 @@ menu:
 {{% blocks/section color="light" type="row" %}}
 
 {{% blocks/feature icon="fa-solid fa-network-wired" title="Digital Twin Native" %}}
-Fully utilize digital twin technology to optimize a network.
+Fully utilize digital twin technologies to optimize a network.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-code" title="OpenFlow Support" %}}
