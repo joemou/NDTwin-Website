@@ -31,8 +31,8 @@ menu:
 
 {{% blocks/section color="light" type="row" %}}
 
-{{% blocks/feature icon="fa-solid fa-network-wired" title="Network Visualization" %}}
-Visualize network status, topology changes, and traffic flows in real time.
+{{% blocks/feature icon="fa-solid fa-network-wired" title="Digital Twin Native" %}}
+Fully utilize digital twin technology to optimize a network.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-code" title="OpenFlow Support" %}}
