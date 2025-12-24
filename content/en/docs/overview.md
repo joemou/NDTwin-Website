@@ -24,16 +24,16 @@ NDTwin operates as a comprehensive development ecosystem that synchronizes your 
 
 ## Why Choose NDTwin?
 
-If your team is developing advanced network applications—such as dynamic routing, load balancing, or energy-aware traffic engineering—NDTwin offers distinct advantages over standard monitoring tools.
+If your team is developing advanced network applications such as dynamic routing, load balancing, or energy-aware traffic engineering, NDTwin offers distinct advantages over standard monitoring tools.
 
-### ✅ Key Benefits
+### Key Benefits
 
 * **Native OpenFlow Support**: Fully compatible with OpenFlow 1.0/1.3 standards. It seamlessly integrates with standard SDN controllers like **Ryu** or ONOS.
 * **Real-time Flow Visualization**: Eliminate manual CLI debugging. Our graphical interface displays active Flow Rules and packet match counters, mapped directly to the topology.
 * **Precise Traffic Monitoring**: Unlike simple counters, our integrated sFlow technology performs **5-tuple sampling** (Src/Dst IP, Port, Protocol) to analyze real-time bandwidth usage and detect congestion bottlenecks.
 * **Dynamic Topology Awareness**: The system automatically detects Link Failures or new switch connections, triggering alerts to help you verify if your rerouting algorithms react correctly.
 
-## 🎯 Use Cases
+## Use Cases
 
 | Scenario | Description |
 | :--- | :--- |
