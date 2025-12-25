@@ -3,7 +3,7 @@ title: Overview
 linkTitle: Overview
 weight: 1
 description: >
-  Understand how NDTwin transforms OpenFlow development through real-time visualization and high-fidelity simulation.
+  NDTwin transforms OpenFlow development through real-time visualization and high-fidelity simulation.
 ---
 
 {{% pageinfo %}}
