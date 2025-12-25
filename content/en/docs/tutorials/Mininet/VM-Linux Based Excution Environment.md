@@ -187,4 +187,4 @@ This application requires two components running simultaneously.
     sudo python3 TE.py
     ```
 
-* [Detailed Third-Party Apps Guide]({{< ref "ThirdPartyApps" >}})
+* [Detailed Third-Party Apps Guide]({{< ref "Tutorials and Demo Videos" >}})
