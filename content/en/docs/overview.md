@@ -7,19 +7,15 @@ description: >
 ---
 
 {{% pageinfo %}}
-**NDTwin (Network Digital Twin)** is a high-fidelity emulation platform designed specifically for **OpenFlow-based SDN networks**. It bridges the gap between control plane logic and data plane reality.
+**NDTwin (Network Digital Twin)** is an open source framework that employs innovative digital twin technologies to optimally operate and manage a network.
 {{% /pageinfo %}}
-
-Debugging in traditional OpenFlow workflows is notoriously difficult. Developers often struggle to visualize how flow entries installed by the controller actually affect packet forwarding in real-time. Parsing `ovs-ofctl dump-flows` text outputs is slow and error-prone.
-
-**NDTwin solves this "visibility gap."** By integrating a high-performance C++ core with the Ryu Controller and sFlow telemetry, we provide a visualized environment where you can verify routing logic, monitor link bandwidth, and simulate failures instantly.
 
 ## What is NDTwin?
 
-NDTwin operates as a comprehensive development ecosystem that synchronizes your physical or emulated network state with a digital graph model.
+NDTwin is a software system that functions as the digital twin of a network. It has the following features:
 
-* **Topology Awareness**: The system continuously polls the Ryu controller to build a real-time graph of switches and links.
-* **Traffic Intelligence**: A built-in sFlow collector listens for telemetry data to calculate bandwidth utilization and identify traffic patterns (like Elephant Flows) with high precision.
+* **Real-time collection of network and flow states**: NDTwin continuously polls the SDN controller to update its real-time graph of switches and links. Besides, it uses the industry-standard sFlow mechanism, which is supported by switches of any brands, to continuously get the real-time states of all flows in the network.  
+* **Simulation and AI/ML-assited Decision Making**: A built-in sFlow collector listens for telemetry data to calculate bandwidth utilization and identify traffic patterns (like Elephant Flows) with high precision.
 * **Deployment Flexibility**: Whether you are running a simulation in **Mininet** or deploying on a physical **Testbed** with hardware switches, NDTwin adapts its monitoring strategy accordingly.
 
 ## Why Choose NDTwin?
