@@ -1,8 +1,6 @@
 baseURL: "https://www.ndtwin.org/"
 title: NDTwin
 
-# cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
-
 # Language settings
 contentDir: content/en
 defaultContentLanguage: en
@@ -54,6 +52,9 @@ outputs:
   section: [HTML, RSS]
 
 params:
+  # ★★★ 關鍵修改：手動加入這一行來解決 CSS 跑版問題 ★★★
+  fingerprint: false
+  
   taxonomy:
     taxonomyCloud: [tags, categories]
     taxonomyCloudTitle: [Tag Cloud, Categories]
@@ -65,10 +66,7 @@ params:
   archived_version: false
   version: 1.0
 
-  # 連結到這份文件的主要專案 (如果是介紹某個軟體)
   url_latest_version: https://github.com/joemou/NetworkDigitalTwin
-
-  # ★★★ 關鍵修改：設定網站本身的 GitHub 倉庫，讓「編輯此頁」功能生效 ★★★
   github_repo: https://github.com/joemou/NDTwin-Website
   github_branch: main
 
@@ -96,28 +94,16 @@ params:
   favicon: true
 
   links:
-    # End user relevant links
     user:
-      # (已暫時註解掉範例連結，你需要時再打開修改)
-      # - name: User mailing list
-      #   url: https://example.org/mail
-      #   icon: fa fa-envelope
-      #   desc: Discussion and help from your fellow users
-    # Developer relevant links
     developer:
       - name: GitHub
         url: https://github.com/joemou/NDTwin-Website
         icon: fab fa-github
         desc: Website Source Code
-      # - name: Slack
-      #   url: https://example.org/slack
-      #   icon: fab fa-slack
-      #   desc: Chat with other project developers
 
 module:
   hugoVersion:
     extended: true
-    # 修改為較穩定的版本需求，避免報錯
     min: 0.120.0
   imports:
     - path: github.com/google/docsy
