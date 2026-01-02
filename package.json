@@ -28,7 +28,7 @@
   "license": "Apache-2.0",
   "name": "docsy-example-site",
   "optionalDependencies": {
-    "npm-check-updates": "^19.1.2"
+    "npm-check-updates": "^19.2.1"
   },
   "prettier": {
     "proseWrap": "always",
